@@ -1,27 +1,40 @@
+## Features & Roadmap
 
-## Features, Roadmap
-**The plugin includes following features:**  
-Vanish  
-Language System (no requirement for resource packs)  
-  
-**Following features are planed for future releases:**  
-Config for Permissions  
-Inventory See / Enderchest See  
-Nick / Fake Name  
-Control (control an offline Player + settings for keeping or reverting made changes on controlled player)
+### Current Features
 
-**Currently Supported Languages:**
-English (US): 100%
-German (DE): 100%
-Lolcat (US): 24%
+* Vanish
+* Language system (no resource pack required)
 
+### Planned Features
 
-## Usage:
-Arguments in [ ] are mandatory  
-Arguments in { } are optional  
+* Permission configuration
+* Inventory See / Ender Chest See
+* Nick / Fake Name
+* Control (control an offline player, with settings to either keep or revert changes made while controlling the player)
 
-Vanish: /vanish {on|off} {player}
+---
 
+## Currently Supported Languages
 
-### Aditional credits:
-**JeanWorldTour**, *for making the lolcat language*
+* English (US): 100%
+* German (DE): 100%
+* Lolcat (US): 24%
+
+---
+
+## Usage
+
+Arguments in `[ ]` are mandatory.
+Arguments in `{ }` are optional.
+
+**Vanish:**
+
+```
+/vanish {on|off} {player}
+```
+
+---
+
+## Additional Credits
+
+**JeanWorldTour** – for creating the Lolcat language
