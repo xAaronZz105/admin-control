@@ -1,4 +1,18 @@
 {
   "admincontrol.vanish.on": "Ur now gone!",
-  "admincontrol.vanish.off": "Ur nawt gone!"
+  "admincontrol.vanish.off": "Ur nawt gone!",
+  "admincontrol.vanish.same.on": "Ur alredi gone!",
+  "admincontrol.vanish.same.off": "Ur alredi nawt gone!",
+
+  "admincontrol.vanish.other.on": "Ur goned by %s!",
+  "admincontrol.vanish.other.off": "Ur undgoned by %s!",
+
+  "admincontrol.vanish.other.execute.on": "U goned %s!",
+  "admincontrol.vanish.other.execute.off": "U ungoned %s!",
+  "admincontrol.vanish.other.execute.same.on": " %s is alredi goned!",
+  "admincontrol.vanish.other.execute.same.off": " %s is alredi ungoned!",
+
+  "admincontrol.console.onlyplayer": "Onwly playrs can execwute thiz command!",
+
+  "admincontrol.player.notfound": "playr %s wasn't foundz!"
 }
