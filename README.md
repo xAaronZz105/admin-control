@@ -15,3 +15,7 @@ Arguments in [ ] are mandatory
 Arguments in { } are optional  
 
 Vanish: /vanish {on|off} {player}
+
+
+### Aditional credits:
+**JeanWorldTour**, *for making the lolcat language*
