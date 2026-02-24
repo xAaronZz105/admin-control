@@ -1,0 +1,11 @@
+name: admin-control
+version: '1.21.8-1.0'
+main: de.xaaron.adminControl.Main
+api-version: '1.21'
+authors: [ xAaronZz105 ]
+description: Helps staff monitoring the server
+commands:
+  vanish:
+    permission: admincontrol.vanish
+    description: Toggles vanish
+    aliases: []

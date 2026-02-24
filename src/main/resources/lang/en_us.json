@@ -1,0 +1,18 @@
+{
+  "admincontrol.vanish.on": "You are now in vanish!",
+  "admincontrol.vanish.off": "You are no longer in vanish!",
+  "admincontrol.vanish.same.on": "Vanish is already on!",
+  "admincontrol.vanish.same.off": "vanish is already off!",
+
+  "admincontrol.vanish.other.on": "You got vanished by %s!",
+  "admincontrol.vanish.other.off": "You got unvanished by %s!",
+
+  "admincontrol.vanish.other.execute.on": "You vanished %s!",
+  "admincontrol.vanish.other.execute.off": "You unvanished %s!",
+  "admincontrol.vanish.other.execute.same.on": "Vanish is already on for %s!",
+  "admincontrol.vanish.other.execute.same.off": "Vanish is already off for %s!",
+
+  "admincontrol.console.onlyplayer": "Only players can execute this command!",
+
+  "admincontrol.player.notfound": "The Player %s wasn't found"
+}

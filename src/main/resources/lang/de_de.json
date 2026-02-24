@@ -1,0 +1,18 @@
+{
+  "admincontrol.vanish.on": "Du bist jetzt unsichtbar!",
+  "admincontrol.vanish.off": "Du bist wieder sichtbar!",
+  "admincontrol.vanish.same.on": "Du bist bereits unsichtbar!",
+  "admincontrol.vanish.same.off": "Du bist bereits wieder sichtbar!",
+
+  "admincontrol.vanish.other.on": "Du wurdest von %s unsichtbar gemacht!",
+  "admincontrol.vanish.other.off": "Du wurdest von %s sichtbar gemacht!",
+
+  "admincontrol.vanish.other.execute.on": "Du hast %s unsichtbar gemacht!",
+  "admincontrol.vanish.other.execute.off": "Du hast %s sichtbar gemacht!",
+  "admincontrol.vanish.other.execute.same.on": "%s ist bereits unsichtbar!",
+  "admincontrol.vanish.other.execute.same.off": "%s ist bereits wieder sichtbar!",
+
+  "admincontrol.console.onlyplayer": "Nur Spieler können diesen Befehl nutzen!",
+
+  "admincontrol.player.notfound": "Der Spieler %s wurde nicht gefunden!"
+}
