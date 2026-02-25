@@ -13,6 +13,10 @@
   "admincontrol.vanish.other.execute.same.off": " %s is alredi ungoned!",
 
   "admincontrol.console.onlyplayer": "Onwly playrs can execwute thiz command!",
+  "admincontrol.command.nopermission": "U don't haw permishuns to execwute thiz command!",
+  "admincontrol.subcommand.nopermission": "U don't haw permishuns to execwute thiz subcommand!",
+
+  "admincontrol.config.reloaded": "Thze configurashun wuz reluaded!",
 
   "admincontrol.player.notfound": "playr %s wasn't foundz!"
 }

@@ -13,6 +13,10 @@
   "admincontrol.vanish.other.execute.same.off": "Vanish is already off for %s!",
 
   "admincontrol.console.onlyplayer": "Only players can execute this command!",
+  "admincontrol.command.nopermission": "You don't have permissions to execute this command!",
+  "admincontrol.subcommand.nopermission": "You don't have permissions to execute this subcommand!",
+
+  "admincontrol.config.reloaded": "The config was reloaded!",
 
   "admincontrol.player.notfound": "The Player %s wasn't found"
 }

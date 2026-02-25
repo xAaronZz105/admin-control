@@ -1,0 +1,8 @@
+permissions:
+  vanish:
+    base: admincontrol.command.vanish
+    self: admincontrol.command.vanish.self
+    other: admincontrol.command.vanish.other
+  admincontrol:
+    base: admincontrol.command.admincontrol
+    config: admincontrol.command.admincontrol.config

@@ -2,6 +2,7 @@ package de.xaaron.adminControl.commands;
 
 import com.destroystokyo.paper.event.player.PlayerAdvancementCriterionGrantEvent;
 import de.xaaron.adminControl.Main;
+import de.xaaron.adminControl.Permissions;
 import de.xaaron.adminControl.ServerTranslatable;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
@@ -29,10 +30,15 @@ public class Vanish implements CommandExecutor, TabCompleter, Listener {
 
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String @NotNull [] args) {
-        if (!command.testPermission(commandSender)) return false;
+        if (!(commandSender.hasPermission(Permissions.VANISH_SELF.getPermission()) || commandSender.hasPermission(Permissions.VANISH_OTHER.getPermission()))) return true;
 
         Player target;
         if (args.length >= 2) {
+            if (!commandSender.hasPermission(Permissions.VANISH_OTHER.getPermission()) && !commandSender.getName().equalsIgnoreCase(args[1])) {
+                commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender));
+                return true;
+            }
+
             target = Bukkit.getPlayer(args[1]);
             if (target == null) {
                 commandSender.sendMessage(ServerTranslatable.translate("admincontrol.player.notfound", commandSender, args[1]));
@@ -44,6 +50,11 @@ public class Vanish implements CommandExecutor, TabCompleter, Listener {
                 return true;
             }
             target = p;
+        }
+
+        if (args.length <= 1 && !commandSender.hasPermission(Permissions.VANISH_SELF.getPermission())) {
+            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender));
+            return true;
         }
 
         boolean turnOn = !vanished.contains(target) || (args.length >= 1 && args[0].equals("on"));

@@ -6,6 +6,5 @@ authors: [ xAaronZz105 ]
 description: Helps staff monitoring the server
 commands:
   vanish:
-    permission: admincontrol.vanish
     description: Toggles vanish
     aliases: []
