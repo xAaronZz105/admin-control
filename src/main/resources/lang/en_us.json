@@ -2,7 +2,7 @@
   "admincontrol.vanish.on": "You are now in vanish!",
   "admincontrol.vanish.off": "You are no longer in vanish!",
   "admincontrol.vanish.same.on": "Vanish is already on!",
-  "admincontrol.vanish.same.off": "vanish is already off!",
+  "admincontrol.vanish.same.off": "Vanish is already off!",
 
   "admincontrol.vanish.other.on": "You got vanished by %s!",
   "admincontrol.vanish.other.off": "You got unvanished by %s!",

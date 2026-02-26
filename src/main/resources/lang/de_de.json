@@ -13,8 +13,8 @@
   "admincontrol.vanish.other.execute.same.off": "%s ist bereits wieder sichtbar!",
 
   "admincontrol.console.onlyplayer": "Nur Spieler können diesen Befehl nutzen!",
-  "admincontrol.command.nopermission": "Du bist nicht berechtigt diesen Befehl zu verwenden!",
-  "admincontrol.subcommand.nopermission": "Du bist nicht berechtigt diesen Unterbefehl zu verwenden!",
+  "admincontrol.command.nopermission": "Du bist nicht berechtigt, diesen Befehl zu verwenden!",
+  "admincontrol.subcommand.nopermission": "Du bist nicht berechtigt, diesen Unterbefehl zu verwenden!",
 
   "admincontrol.config.reloaded": "Die Konfiguration wurde erfolgreich neu geladen!",
 

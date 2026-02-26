@@ -1,0 +1,22 @@
+{
+  "admincontrol.vanish.on": "Tu es maintenant dans Vanish !",
+  "admincontrol.vanish.off": "Tu n'es plus dans Vanish !",
+  "admincontrol.vanish.same.on": "Vanish est déjà lancé !",
+  "admincontrol.vanish.same.off": "Vanish est déjà désactivé !",
+
+  "admincontrol.vanish.other.on": "Tu as été mis en vanish par %s !",
+  "admincontrol.vanish.other.off": "Tu n'es plus en vanish grâce à %s !",
+
+  "admincontrol.vanish.other.execute.on": "Tu as fait disparaître %s !",
+  "admincontrol.vanish.other.execute.off": "Tu as désactivé le vanish pour %s !",
+  "admincontrol.vanish.other.execute.same.on": "Vanish est déjà activé pour %s !",
+  "admincontrol.vanish.other.execute.same.off": "Vanish est déjà désactivé pour %s !",
+
+  "admincontrol.console.onlyplayer": "Seuls les joueurs peuvent exécuter cette commande !",
+  "admincontrol.command.nopermission": "Tu n'as pas les autorisations nécessaires pour exécuter cette commande !",
+  "admincontrol.subcommand.nopermission": "Tu n'as pas les autorisations nécessaires pour exécuter cette sous-commande !",
+
+  "admincontrol.config.reloaded": "La configuration a été rechargée !",
+
+  "admincontrol.player.notfound": "Le joueur %s n'a pas été trouvé."
+}

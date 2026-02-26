@@ -1,3 +1,4 @@
 de_de.json
 en_us.json
 lol_us.json
+fr_fr.json
