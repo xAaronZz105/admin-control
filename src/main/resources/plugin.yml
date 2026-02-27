@@ -1,5 +1,5 @@
 name: admin-control
-version: '1.21.8-1.0'
+version: '1.21.8-1.1A'
 main: de.xaaron.adminControl.Main
 api-version: '1.21'
 authors: [ xAaronZz105 ]

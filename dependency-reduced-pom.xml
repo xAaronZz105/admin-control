@@ -4,7 +4,7 @@
   <groupId>de.xaaron</groupId>
   <artifactId>admin-control</artifactId>
   <name>admin-control</name>
-  <version>1.21.8-1.0</version>
+  <version>1.21.8-1.1A</version>
   <build>
     <defaultGoal>clean package</defaultGoal>
     <resources>
