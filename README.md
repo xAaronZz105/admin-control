@@ -4,10 +4,10 @@
 
 * Vanish
 * Language system (no resource pack required)
+* Permission configuration
 
 ### Planned Features
 
-* Permission configuration
 * Inventory See / Ender Chest See
 * Nick / Fake Name
 * Control (control an offline player, with settings to either keep or revert changes made while controlling the player)
