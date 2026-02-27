@@ -2,6 +2,10 @@ package de.xaaron.adminControl;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import org.bukkit.Color;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -30,7 +34,10 @@ public final class ServerTranslatable {
 
     private static final Map<String, Map<String, String>> CACHE = new ConcurrentHashMap<>();
 
-    private ServerTranslatable() {
+    private NamedTextColor textColor;
+    private final String text;
+    private ServerTranslatable(String translatedString) {
+        this.text = translatedString;
     }
 
     public static void init() {
@@ -43,7 +50,7 @@ public final class ServerTranslatable {
         CACHE.clear();
     }
 
-    public static String translate(String key, String langCode) {
+    public static ServerTranslatable translate(String key, String langCode) {
         Objects.requireNonNull(key, "key");
 
         String code = normalizeLangCode(langCode);
@@ -54,31 +61,44 @@ public final class ServerTranslatable {
             if (!"en_us".equals(code)) {
                 Map<String, String> en = CACHE.computeIfAbsent("en_us", ServerTranslatable::loadMergedForLang);
                 String enValue = en.get(key);
-                if (enValue != null && !enValue.isBlank()) return enValue;
+                if (enValue != null && !enValue.isBlank()) return new ServerTranslatable(enValue);
             }
-            return key;
+            return new ServerTranslatable(key);
         }
 
-        return value;
+        return new ServerTranslatable(value);
     }
-    public static String translate(String key, Player player) {
+    public static ServerTranslatable translate(String key, Player player) {
         return translate(key, player.locale().toLanguageTag());
     }
 
-    public static String translate(String key, Player player, Object... replacements) {
-        return String.format(translate(key, player), replacements);
+    public static ServerTranslatable translate(String key, Player player, Object... replacements) {
+        return new ServerTranslatable(String.format(translate(key, player).toString(), replacements));
     }
-    public static String translate(String key, String langCode, Object... replacements) {
-        return String.format(translate(key, langCode), replacements);
+    public static ServerTranslatable translate(String key, String langCode, Object... replacements) {
+        return new ServerTranslatable(String.format(translate(key, langCode).toString(), replacements));
     }
 
-    public static String translate(String key, CommandSender sender) {
+    public static ServerTranslatable translate(String key, CommandSender sender) {
         if (sender instanceof Player p) return translate(key, p);
         return translate(key, "en_us");
     }
-    public static String translate(String key, CommandSender sender, Object... replacements) {
+    public static ServerTranslatable translate(String key, CommandSender sender, Object... replacements) {
         if (sender instanceof Player p) return translate(key, p, replacements);
         return translate(key, "en_us", replacements);
+    }
+
+    public ServerTranslatable color(NamedTextColor color) {
+        this.textColor = color;
+        return this;
+    }
+    @Override
+    public String toString() {
+        Component component = Component.text(text);
+        if (textColor != null) {
+            component = component.color(textColor);
+        }
+        return LegacyComponentSerializer.legacySection().serialize(component);
     }
 
     // ---------------- internal ----------------

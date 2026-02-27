@@ -30,30 +30,34 @@ public class Vanish implements CommandExecutor, TabCompleter, Listener {
 
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String @NotNull [] args) {
-        if (!(commandSender.hasPermission(Permissions.VANISH_SELF.getPermission()) || commandSender.hasPermission(Permissions.VANISH_OTHER.getPermission()))) return true;
+        if (!(commandSender.hasPermission(Permissions.VANISH_SELF.getPermission()) || commandSender.hasPermission(Permissions.VANISH_OTHER.getPermission()))) {
+            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.command.nopermission", commandSender).color(NamedTextColor.RED).toString());
+            return true;
+        }
 
         Player target;
         if (args.length >= 2) {
             if (!commandSender.hasPermission(Permissions.VANISH_OTHER.getPermission()) && !commandSender.getName().equalsIgnoreCase(args[1])) {
-                commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender));
+                commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender).color(NamedTextColor.RED).toString());
                 return true;
             }
 
             target = Bukkit.getPlayer(args[1]);
             if (target == null) {
-                commandSender.sendMessage(ServerTranslatable.translate("admincontrol.player.notfound", commandSender, args[1]));
+                commandSender.sendMessage(ServerTranslatable.translate("admincontrol.player.notfound", commandSender, args[1]).color(NamedTextColor.RED).toString());
                 return true;
             }
         } else {
             if (!(commandSender instanceof Player p)) {
                 commandSender.sendMessage("Only players can execute this command!");
+                commandSender.sendMessage(ServerTranslatable.translate("admincontrol.console.onlyplayer", commandSender).color(NamedTextColor.RED).toString());
                 return true;
             }
             target = p;
         }
 
         if (args.length <= 1 && !commandSender.hasPermission(Permissions.VANISH_SELF.getPermission())) {
-            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender));
+            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender).color(NamedTextColor.RED).toString());
             return true;
         }
 
@@ -63,15 +67,15 @@ public class Vanish implements CommandExecutor, TabCompleter, Listener {
         String translationKey = turnOn ? "on" : "off";
 
         if (vanished.contains(target) == turnOn) {
-            if (target == commandSender) target.sendMessage(ServerTranslatable.translate("admincontrol.vanish.same." + translationKey, target));
-            else commandSender.sendMessage(ServerTranslatable.translate("admincontrol.vanish.other.execute.same." + translationKey, commandSender, target.getName()));
+            if (target == commandSender) target.sendMessage(ServerTranslatable.translate("admincontrol.vanish.same." + translationKey, target).toString());
+            else commandSender.sendMessage(ServerTranslatable.translate("admincontrol.vanish.other.execute.same." + translationKey, commandSender, target.getName()).toString());
             return true;
         }
 
-        if (target == commandSender) target.sendMessage(ServerTranslatable.translate("admincontrol.vanish." + translationKey, target));
+        if (target == commandSender) target.sendMessage(ServerTranslatable.translate("admincontrol.vanish." + translationKey, target).toString());
         else {
-            target.sendMessage(ServerTranslatable.translate("admincontrol.vanish.other." + translationKey, target, commandSender.getName()));
-            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.vanish.other.execute." + translationKey, commandSender, target.getName()));
+            target.sendMessage(ServerTranslatable.translate("admincontrol.vanish.other." + translationKey, target, commandSender.getName()).toString());
+            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.vanish.other.execute." + translationKey, commandSender, target.getName()).toString());
         }
 
 

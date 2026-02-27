@@ -6,7 +6,7 @@
 
     <groupId>de.xaaron</groupId>
     <artifactId>admin-control</artifactId>
-    <version>1.21.8-1.1A</version>
+    <version>1.21.8-1.1</version>
     <packaging>jar</packaging>
 
     <name>admin-control</name>

@@ -23,7 +23,7 @@ public class admincontrol implements CommandExecutor, TabCompleter {
                 switch (args[1]) {
                     case "reload" -> {
                         if (!commandSender.hasPermission(Permissions.ADMINCONTROL_CONFIG.getPermission())) {
-                            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender));
+                            commandSender.sendMessage(ServerTranslatable.translate("admincontrol.subcommand.nopermission", commandSender).toString());
                             return true;
                         }
 
@@ -31,7 +31,7 @@ public class admincontrol implements CommandExecutor, TabCompleter {
                         Main.instance.getCommand("vanish").setPermission(Permissions.VANISH_BASE.getPermission());
                         Main.instance.getCommand("admincontrol").setPermission(Permissions.ADMINCONTROL_BASE.getPermission());
 
-                        commandSender.sendMessage(ServerTranslatable.translate("admincontrol.config.reloaded", commandSender));
+                        commandSender.sendMessage(ServerTranslatable.translate("admincontrol.config.reloaded", commandSender).toString());
                         return true;
                     }
                 }
