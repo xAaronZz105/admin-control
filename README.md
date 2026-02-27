@@ -18,7 +18,8 @@
 
 * English (US): 100%
 * German (DE): 100%
-* Lolcat (US): 24%
+* Lolcat (US): 100%
+* French (FR): 100%
 
 ---
 
