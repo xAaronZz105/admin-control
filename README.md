@@ -32,6 +32,7 @@ Arguments in `{ }` are optional.
 
 ```
 /vanish {on|off} {player}
+/admincontrol [config] [reload]
 ```
 
 ---
